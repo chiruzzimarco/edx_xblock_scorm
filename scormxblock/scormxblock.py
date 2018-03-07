@@ -112,7 +112,6 @@ class ScormXBlock(XBlock):
     def studio_submit(self, request, suffix=''):
         self.display_name = request.params['display_name']
         self.has_score = request.params['has_score']
-        self.icon_class = 'problem' if self.has_score == 'True' else 'video'
         if hasattr(request.params['file'], 'file'):
             file = request.params['file'].file
             zip_file = zipfile.ZipFile(file, 'r')
