@@ -71,7 +71,7 @@ class ScormXBlock(XBlock):
         scope=Scope.settings
     )
     icon_class = String(
-        default="video",
+        default="problem",
         scope=Scope.settings,
     )
 
