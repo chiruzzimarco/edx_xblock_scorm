@@ -208,12 +208,8 @@ class ScormXBlock(XBlock):
         }
 
     def get_context_student(self):
-        scorm_file_path = ''
-        if self.scorm_file:
-             scorm_file_path = "/{}".format(self.scorm_file)
-
         return {
-            'scorm_file_path': scorm_file_path,
+            'scorm_file_path': self.scorm_file,
             'lesson_score': self.lesson_score,
             'weight': self.weight,
             'has_score': self.has_score,
